@@ -23,8 +23,8 @@ function trueState() {
 
 formEl.addEventListener("submit", function (event) {
   if (!validateEmail(inputEl.value) || inputEl.value === "") {
-    errorState();
     event.preventDefault();
+    errorState();
   } else {
     localStorage.setItem("email", inputEl.value);
     trueState();
