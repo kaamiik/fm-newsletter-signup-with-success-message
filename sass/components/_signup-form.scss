@@ -16,7 +16,7 @@
 
     &[aria-invalid="true"] {
       outline-color: clr(primary, 400);
-      background-color: rgb(clr(primary, 400), 15%);
+      background-color: rgb(clr(primary, 400), 15%) !important;
     }
   }
 
