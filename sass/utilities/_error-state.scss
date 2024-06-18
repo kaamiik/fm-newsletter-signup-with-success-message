@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.error-state {
+  outline-color: red !important;
+  background-color: rgba(clr(primary, 400), 0.15);
+}

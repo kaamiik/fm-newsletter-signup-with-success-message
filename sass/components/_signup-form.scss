@@ -9,15 +9,9 @@
     border: 1px solid hsla(243, 28%, 13%, 25%);
     border-radius: size(8);
     outline: 1px solid transparent;
-    background-color: none;
 
     &:focus-within {
-      outline-color: #d8d8d8;
-    }
-
-    &[aria-invalid="true"] {
-      outline-color: clr(primary, 400);
-      background-color: rgba(255, 98, 87, 15%) !important;
+      outline-color: clr(neutral, 900);
     }
   }
 

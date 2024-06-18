@@ -12,12 +12,14 @@ function validateEmail(email) {
 function errorState() {
   errorMessage.classList.remove("hidden");
   inputEl.setAttribute("aria-invalid", "true");
+  inputEl.classList.add("error-state");
   inputEl.focus();
 }
 
 function trueState() {
   errorMessage.classList.add("hidden");
   inputEl.setAttribute("aria-invalid", "false");
+  inputEl.classList.remove("error-state");
   inputEl.value = "";
 }
 
