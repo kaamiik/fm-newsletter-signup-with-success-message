@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import htmlPurge from "vite-plugin-html-purgecss";
 
 export default defineConfig({
-  plugins: [htmlPurge()],
   build: {
     rollupOptions: {
       input: {

@@ -13,6 +13,11 @@
     &:focus-within {
       outline-color: clr(neutral, 900);
     }
+
+    &[aria-invalid="true"] {
+      outline-color: clr(primary, 400);
+      background-color: rgba(clr(primary, 400), 0.15);
+    }
   }
 
   .error-message {
