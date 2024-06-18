@@ -1,9 +1,5 @@
 @use "../abstracts" as *;
 
-.section {
-  padding-block: $section-padding;
-}
-
 .mx-auto {
   margin-inline: auto;
 }
@@ -16,7 +12,10 @@
 }
 
 .signup-section-padding {
-  padding: $section-padding;
+  padding: $section-mobile-padding;
+  @include mq(medium) {
+    padding: $section-desktop-padding;
+  }
 }
 
 .success-section-padding {
