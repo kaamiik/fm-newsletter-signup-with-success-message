@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flex-gap, $flex-group-gap);
+}

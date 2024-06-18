@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+ul {
+  padding-inline-start: size(24);
+
+  li {
+    padding-inline-start: size(16);
+    &::marker {
+      content: url("/assets/images/icon-list.svg");
+      margin-top: 4px;
+    }
+  }
+}

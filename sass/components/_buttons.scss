@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: size(8);
+  padding-block: 1rem;
+  font-weight: $fw-700;
+  color: clr(neutral, 100);
+  background-color: clr(neutral, 900);
+
+  &:is(:hover, :focus) {
+    background: $linear-gradient;
+    color: clr(neutral, 100);
+    box-shadow: 0 16px 32px rgb(255, 97, 85, 50%);
+  }
+}

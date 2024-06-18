@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+
+  .signup-illustration {
+    order: -1;
+    @include mq(medium) {
+      order: revert;
+    }
+  }
+  @include mq(medium) {
+    grid-template-columns: 1fr auto;
+    place-items: center;
+  }
+}

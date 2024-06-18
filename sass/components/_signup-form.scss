@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.signup-form {
+  position: relative;
+  display: grid;
+  gap: $form-grid-gap;
+
+  .email-input {
+    border: 1px solid hsla(243, 28%, 13%, 25%);
+    border-radius: size(8);
+    outline: 1px solid transparent;
+
+    &:focus-within {
+      outline-color: #d8d8d8;
+    }
+
+    &[aria-invalid="true"] {
+      outline-color: clr(primary, 400);
+      background-color: rgb(clr(primary, 400), 15%);
+    }
+  }
+
+  .error-message {
+    position: absolute;
+    right: 0;
+  }
+}

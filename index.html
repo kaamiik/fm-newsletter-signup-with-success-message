@@ -1,22 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Title</title>
-  <link rel="stylesheet" href="/sass/main.scss">
-</head>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" href="./sass/main.scss" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div
+        class="container | grid bg-neutral-100 border-radius box-shadow-5"
+        style="--grid-gap: 0"
+      >
+        <div class="signup-section-padding">
+          <h1 class="clr-neutral-900 fs-800">Stay updated!</h1>
+          <p class="margin-block-24">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="flow" style="--flow-soacer: 0.625rem">
+            <li class="benefit-item">
+              Product discovery and building what matters
+            </li>
+            <li class="benefit-item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="benefit-item">And much more!</li>
+          </ul>
+          <form
+            action="./success.html"
+            method="post"
+            class="signup-form | margin-block-start-40"
+            novalidate
+          >
+            <p class="error-message | fs-200 fw-bold clr-primary-400 hidden">
+              Valid email required
+            </p>
+            <div class="flex-item" style="--flex-gap: 0.5rem">
+              <label for="email" class="email-label | fs-200 fw-bold"
+                >Email address</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+                class="email-input | padding-block-16 padding-inline-start-24"
+                aria-invalid="false"
+              />
+            </div>
+            <button type="submit" class="button">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <picture class="signup-illustration | illustration">
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 46rem)"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Illustration of a newsletter sign-up with various graphical elements, including gradient backgrounds, paths, circles, and rectangular shapes in a modern design style."
+            class="signup-image mx-auto"
+          />
+        </picture>
+      </div>
+    </main>
 
-<body>
-
-  <main>
-    content goes here
-  </main>
-
-
-  <script src="/main.js"></script>
-</body>
-
+    <footer class="footer text-center fs-200">
+      Challenge by
+      <a
+        class="footer-link clr-primary-400"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a class="footer-link clr-primary-400" href="#">Kamran Kiani</a>.
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.container {
+  --max-width: #{$container-max-width};
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+  @include mq(medium) {
+    width: min(100% - 3rem, var(--max-width));
+  }
+}
+
+.container[data-type="success"] {
+  --max-width: #{$container-max-width-success};
+}

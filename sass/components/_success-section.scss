@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.success-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  @include mq(medium) {
+    justify-content: flex-start;
+    min-height: revert;
+  }
+  & > div {
+    display: grid;
+    img {
+      order: -1;
+      margin-block-start: 6.875rem;
+      @include mq(medium) {
+        margin-block-start: revert;
+      }
+    }
+  }
+}

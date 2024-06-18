@@ -1,0 +1,28 @@
+$sizes: (
+  8: 0.5rem,
+  12: 0.75rem,
+  16: 1rem,
+  20: 1.25rem,
+  24: 1.5rem,
+  28: 1.75rem,
+  32: 2rem,
+  36: 2.25rem,
+  40: 2.5rem,
+  44: 2.75rem,
+  48: 3rem,
+);
+
+// $section-padding: clamp(2.5rem, 1.2236rem + 5.446vi, 6.125rem)
+//   clamp(1.5rem, 0.6197rem + 3.7559vi, 4rem);
+
+$section-padding: clamp(2.5rem, 5vw + 1rem, 6.125rem)
+  clamp(1.5rem, 4vw + 0.5rem, 4rem);
+
+$illustration-padding: 1.5rem;
+
+$grid-gap: 1rem;
+$form-grid-gap: 1.5rem;
+$flex-group-gap: 1rem;
+
+$container-max-width: 58rem;
+$container-max-width-success: 31.5rem;

@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@rollup/plugin-html": "^1.0.3",
     "postcss-preset-env": "^8.4.2",
     "sass": "^1.63.3",
     "vite": "^4.3.9",

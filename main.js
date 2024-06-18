@@ -1,24 +1,40 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const formEl = document.querySelector(".signup-form");
+const inputEl = document.querySelector(".email-input");
+const errorMessage = document.querySelector(".error-message");
+const emailAddress = document.querySelector(".email-address");
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+function validateEmail(email) {
+  const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
-setupCounter(document.querySelector('#counter'))
+  return regex.test(email);
+}
+
+function errorState() {
+  errorMessage.classList.remove("hidden");
+  inputEl.setAttribute("aria-invalid", "true");
+  inputEl.focus();
+}
+
+function trueState() {
+  errorMessage.classList.add("hidden");
+  inputEl.setAttribute("aria-invalid", "false");
+  inputEl.value = "";
+}
+
+formEl.addEventListener("submit", function (event) {
+  if (!validateEmail(inputEl.value) || inputEl.value === "") {
+    errorState();
+    event.preventDefault();
+  } else {
+    localStorage.setItem("email", inputEl.value);
+    trueState();
+  }
+});
+
+window.addEventListener("load", function () {
+  if (emailAddress) {
+    const emailValue = localStorage.getItem("email");
+
+    emailAddress.textContent = emailValue;
+  }
+});

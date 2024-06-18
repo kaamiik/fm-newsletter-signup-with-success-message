@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.border-radius {
+  @include mq(medium) {
+    border-radius: 36px;
+  }
+}

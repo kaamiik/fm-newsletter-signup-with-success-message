@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" href="./sass/main.scss" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div
+        class="container | bg-neutral-100 border-radius box-shadow-5"
+        style="--grid-gap: 0"
+        data-type="success"
+      >
+        <div class="success-section | success-section-padding">
+          <div>
+            <h1 class="clr-neutral-900 fs-800 margin-block-start-40">
+              Thanks for subscribing!
+            </h1>
+            <img
+              src="assets/images/icon-success.svg"
+              alt=""
+              class="succes-icon"
+            />
+            <p class="margin-block-start-24" aria-live="polite">
+              A confirmation email has been sent to
+              <strong class="email-address">ash@loremcompany.com</strong>.
+              Please open it and click the button inside to confirm your
+              subscription.
+            </p>
+          </div>
+          <form
+            action="./index.html"
+            method="post"
+            class="signup-form margin-block-start-40"
+          >
+            <button type="submit" class="button">Dismiss message</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer text-center fs-200">
+      Challenge by
+      <a
+        class="footer-link clr-primary-400"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a class="footer-link clr-primary-400" href="#">Kamran Kiani</a>.
+    </footer>
+  </body>
+</html>
